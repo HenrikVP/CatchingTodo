@@ -1,5 +1,6 @@
 package dk.tec.catchingtodo;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -21,5 +22,6 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        startActivity(new Intent(this, CreateTodoActivity.class));
     }
 }

@@ -8,11 +8,14 @@ import java.util.List;
 import java.util.UUID;
 
 
-enum TypeTask {CLEANING, COOKING, YARDWORK, TELEVISION, PLANNING, COALMINING}
+//enum TypeTask {CLEANING, COOKING, YARDWORK, TELEVISION, PLANNING, COALMINING}
+
 
 enum Priority {HIGH, NORMAL, LOW}
 
 public class TodoItem {
+    public static String[] tasktypes = {"CLEANING", "COOKING", "YARDWORK", "TELEVISION", "PLANNING", "COALMINING"};
+
     UUID id = java.util.UUID.randomUUID();
     String name;
     String imageBeforeFile;
@@ -23,7 +26,7 @@ public class TodoItem {
     LocalDateTime startTime;
     LocalDateTime endTime;
     int ticksSpend;
-    TypeTask typeTask;
+    int tasktype;
     Location location;
     List<TodoItem> todoItemsBlockersList;
     Boolean isCompleted = false;
